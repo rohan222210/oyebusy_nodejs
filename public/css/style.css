@@ -1,0 +1,130 @@
+*{box-sizing: border-box;}
+body{margin: 0px; padding: 0px;}
+a{text-decoration: none;}
+
+.container{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0px;
+}
+.section{
+    display: block;
+    position: relative;
+    width: 90%;
+    min-height: 400px;
+    margin: 85px auto;
+}
+.user-box{
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    border: 1px solid #C6C0C0;
+    border-radius: 10px;
+    width: 410px;
+    padding: 10px;
+}
+.tittle{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin:5px;
+    
+}
+.tittle i{
+    margin-right:4px;
+}
+.tittle h1{
+    font-size: 28px;
+}
+.page-message{
+    position: relative;
+    width: 100%;
+    /* min-height: 28px; */
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FDF9D3;
+    font-size: 12px;
+    display: flex;
+}
+.page-message div{
+    position: relative;
+    height: 28px;
+    padding: 0px;
+}
+.page-message div p{
+    line-height: 28px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+
+}
+.page-message div i {
+    line-height: 28px;
+    padding: 0px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.user-form{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+}
+  .form-field{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+    
+}
+  .form-field label{
+      display: block;
+      position: relative;
+      margin-bottom: 3px;
+      font-size: 14px;
+      color: #4C4B48;
+  }
+  .form-field input{
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-left: 10px;
+      font-size: 12px;
+      color:#807F84;
+      height: 28px;
+      line-height: 28px;
+      border: 1px solid #C6C0C0;
+    
+  }
+  .form-field input[type=submit]{
+    display: block;
+    position: relative;
+    background-color: #EB6863;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-links{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.form-links p{
+    display: block;
+    position: relative;
+    font-size: 14px;
+    color: #666666;
+    margin:0px;
+}
+.form-links p a{
+    color: #F6BFC0;
+}

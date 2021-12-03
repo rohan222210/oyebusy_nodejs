@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- font awesome --}}
+    <script src="https://kit.fontawesome.com/a647bb2980.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="publicfolder/css/dashboard.css">
+    <script src="/jq/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $("#addbandsbody").hide();
+            $("#userprofil").hide();
+            $("#useroption").hide();
+
+            $("#addbands").click(function () {
+                $("#allbands").hide();
+                $("#addbandsbody").show();
+                $("#userprofil").hide();
+            });
+            $("#mybands").click(function () {
+                $("#allbands").show();
+                $("#addbandsbody").hide();
+                $("#userprofil").hide();
+            });
+            $("#useroptionprofil").click(function () {
+                $("#allbands").hide();
+                $("#addbandsbody").hide();
+                $("#userprofil").show();
+            });
+
+            $("#usericon").hover(
+                function () { $("#useroption").show(); },
+                function () { $("#useroption").hide(); }
+            )
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <div class="header">
+                <div class="navigation">
+                    <div class="nav_item">
+                        <p>
+                            <span id="mybands">MY BANDS</span>
+                            <span id="addbands">ADD BANDS</span>
+                        </p>
+                    </div>
+                    <div id="usericon" class="usericon">
+                        <p>
+                            <i class="fas fa-user-circle"></i>
+                        </p>
+                        <div id="useroption" class="useroption">
+                            <button id="useroptionprofil">Profil</button>     
+                            <button><a href="/logout">Logout</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{!-- all Bands --}}
+            <div id="allbands" class="bands-body">
+                {{#each bands}}
+                <div class="band-item">
+                    <div class="band-head">
+                        <div class="band-head-flex">
+                            <div class="band-tittle">
+                                <p>{{this.name}}</p>
+                            </div>
+                            <div class="band-star">
+                                <p>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="band-middle">
+                        <p>
+                           {{this.description}}
+                        </p>
+                    </div>
+                    <div class="band-bottom">
+                        <p>
+                            {{this.origin}}
+                        </p>
+                    </div>
+                </div>
+                {{/each}}
+                
+            </div>
+
+            {{!-- add bands --}}
+            <div id="addbandsbody" class="addbandsbody">
+                <div class="user-box">
+                    <div class="tittle">
+                        <h1><i class="far fa-plus-square"></i>Add Band</h1>
+                    </div>
+                    <div class="page-message">
+                        <div>
+                            <p>This is a message</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="user-form">
+                        <form action="/addband" method="post">
+                            <div class="form-field">
+                                <label>Name</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Description</label>
+                                <input type="text" name="description" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Origin</label>
+                                <input type="text" name="origin" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Rating</label>
+                                <select name="rating" id="cars">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="4">5</option>
+                                </select>
+                            </div>
+                            <div class="form-field twobutton">
+                                <input class="background-color-blue" type="button" value="Back">
+                                <input type="submit" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- user profil --}}
+            <div id="userprofil" class="userprofil">
+                <div class="user-box">
+                    <div class="tittle">
+                        <h1><i class="fas fa-user"></i>Profil</h1>
+                    </div>
+                    <div class="page-message">
+                        <div>
+                            <p>This is a message</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="user-form">
+                        <form action="/edituser" method="post">
+                            <div class="form-field">
+                                <label>Name</label>
+                                <input type="text" value={{userprofil.name}} name="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Email</label>
+                                <input type="email" value={{userprofil.email}} name="email" disabled>
+                            </div>
+                            <div class="form-field">
+                                <label>Organization</label>
+                                <input type="text" value={{userprofil.organization}} name="organization" required>
+                            </div>
+                            <div class="form-field">
+                                <label>Date Of Birth</label>
+                                <input type="date" value={{userprofil.dateofbirth}} name="dateofbirth" required>
+                            </div>
+                            <div class="form-field twobutton">
+                                <a href="/dashboard"><input class="background-color-blue" type="button" value="Back"></a>
+                                <input type="submit" value="Save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

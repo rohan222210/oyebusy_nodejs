@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Document</title>
+    {{!-- font awesome --}} <script src="https://kit.fontawesome.com/a647bb2980.js" crossorigin="anonymous"></script> 
+    {{!-- bootstrap --}} <link rel="stylesheet" href="../css/bootstrap.min.css">
+    {{!-- custom css --}}  <link rel="stylesheet" href="publicfolder/css/style.css">
+    <script src="/jq/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#closeErrorMessage").click(function(){
+           $("#errorMessage").fadeOut();
+        })
+      });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="user-box">
+                <div class="tittle">
+                    <h1><i class="fas fa-sign-in-alt"></i>Login</h1>
+                </div>
+                {{#if msg}}
+                <div id="errorMessage" class="page-message">
+                    <div>
+                        <p>{{msg}}</p>
+                    </div>
+                    <div>
+                        <i id="closeErrorMessage" class="fas fa-times"></i>
+                    </div>
+                </div>
+                {{/if}}
+                <div class="user-form">
+                  <form action="/" method="post">
+                      <div class="form-field">
+                        <label>Email</label>
+                        <input type="text" name="email" required>
+                      </div>
+                      <div class="form-field">
+                        <label>Password</label>
+                        <input type="text" name="password" required>
+                      </div>
+                      <div class="form-field">
+                        <input type="submit" value="Login">
+                      </div>
+
+                  </form>
+                </div>
+                <div class="form-links">
+                    <p>Forgot Password? <a href="/resetpassword">Reset password</a></p>
+                    <p>No Account <a href="/register">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+ <script src="../jq/jquery.js" type="text/javascript"></script>
+ <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

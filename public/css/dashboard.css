@@ -1,0 +1,326 @@
+*{box-sizing: border-box;}
+body{margin: 0px; padding: 0px;}
+a{text-decoration: none;}
+
+.container{
+    display: block;
+    position: relative;
+    width: 95%;
+    height: auto;
+    padding-top: 50px;
+    margin: 0px auto;
+}
+
+.main-box{
+    display: block;
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+/* Header part  */
+
+.header{
+    display: block;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.navigation{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_item{
+    position: relative;
+}
+
+.nav_item p {
+    display: block;
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    margin: 0px;
+}
+
+.nav_item p span{
+    margin-left: 10px;
+    font-size: 18px;
+    color: #5A5F63;
+    font-weight: bold;
+    cursor: pointer;
+}
+.usericon{
+    position: relative;
+    min-width: 20px;
+    min-height: 40px;
+}
+.usericon p {
+    display: block;
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    margin: 0px;
+    font-size: 40px;
+    margin-right: 10px;
+}
+.usericon p i{
+    cursor: pointer;
+}
+
+/* Middle bands part  */
+.bands-body{
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    
+}
+.band-item{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #5A5F63;
+    border-bottom: 1px solid #5A5F63;
+    padding-top:3px ;
+    margin-top: 10px;
+}
+.band-head{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.band-head-flex{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.band-tittle{
+    display: block;
+    position: relative;
+    height: 28px;
+}
+.band-tittle p{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    color: #5A5F63;    
+    height: 28px;
+    line-height: 28px;
+    margin: 0px;
+    font-weight: bold;
+}
+.band-star{
+    display: block;
+    position: relative;
+    height: 28px;
+}
+.band-star p{
+    display: block;
+    position: relative;
+    font-size: 10px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0px;
+}
+.band-middle{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.band-middle p {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 13px;
+    line-height: 18px;
+    color: #929797;
+    margin: 0px;
+}
+.band-bottom{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin:3px 10px 0px 10px;
+}
+.band-bottom p{
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 11px;
+    color: #929797;
+    margin: 0px;
+}
+.useroption{
+    display: block;
+    position: absolute;
+    width: 120px;
+    z-index: 1;
+    right: 0;
+}
+.useroption button{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: aliceblue;
+    margin-bottom: 1px;
+}
+.useroption button:hover{
+    background-color: antiquewhite;
+}
+
+/* profil css  */
+.addbandsbody{
+    display: block;
+    position: relative;
+    width: 100%;
+    height:auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.user-box{
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    border: 1px solid #C6C0C0;
+    border-radius: 10px;
+    width: 410px;
+    padding: 10px;
+}
+.tittle{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin:5px;
+    
+}
+.tittle i{
+    margin-right:4px;
+}
+.tittle h1{
+    font-size: 28px;
+}
+.page-message{
+    position: relative;
+    width: 100%;
+    min-height: 28px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FDF9D3;
+    font-size: 12px;
+    display: none;
+}
+.page-message div{
+    position: relative;
+    height: 28px;
+    padding: 0px;
+}
+.page-message div p{
+    line-height: 28px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+
+}
+.page-message div i {
+    line-height: 28px;
+    padding: 0px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.user-form{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .form-field{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+    
+  }
+  .form-field label{
+      display: block;
+      position: relative;
+      margin-bottom: 3px;
+      font-size: 14px;
+      color: #4C4B48;
+  }
+  .form-field input{
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-left: 10px;
+      font-size: 12px;
+      color:#807F84;
+      height: 28px;
+      line-height: 28px;
+      border: 1px solid #C6C0C0;
+    
+  }
+  .form-field input[type=submit]{
+    display: block;
+    position: relative;
+    background-color: #EB6863;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-field input[type=button]{
+    display: block;
+    position: relative;
+    background-color: #386593;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.twobutton{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.twobutton input{
+    width: 55px;
+    line-height: 30px;
+}
+/* User Profil */
+.userprofil{
+    display: block;
+    position: relative;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.form-field select{
+    display: block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    width: 100%;
+}
